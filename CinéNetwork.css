@@ -1,0 +1,289 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 5;
+    display: block;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: transparent;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: 15;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 16;
+}
+
+.curtain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-size: 200% 100%;
+    background-image: url('images/logo.png');
+    z-index: 20;
+    transition: width 3s ease;
+}
+
+.curtain.left {
+    left: 0;
+    background-position: left center;
+}
+
+.curtain.right {
+    right: 0;
+    background-position: right center;
+}
+
+.overlay-text {
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 16;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+p {
+    font-size: 1.5em;
+    margin-bottom: 100px;
+}
+
+.button-redirect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+}
+
+.redirect-button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.redirect-button:hover {
+    box-shadow: 0 0 8px 3px white;
+    transform: scale(1.05);
+}
+
+@media screen and (min-width: 830px) and (max-width: 950px) {
+    .overlay-text {
+        width: 750px;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 60px;
+    }
+    
+    p {
+        font-size: 1.2em;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 1em;
+
+    }
+
+    .button-redirect {
+        gap: 150px;
+    }
+}
+
+@media screen and (min-width: 710px) and (max-width: 830px) {
+    .overlay-text {
+        width: 700px;
+    }
+    h1 {
+        font-size: 2.2em;
+        margin-bottom: 60px;
+    }
+    
+    p {
+        font-size: 1em;
+        margin-bottom: 60px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 1em;
+
+    }
+
+    .button-redirect {
+        gap: 80px;
+    }
+}
+
+@media screen and (min-width: 610px) and (max-width: 710px) {
+    .overlay-text {
+        width: 600px;
+    }
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 50px;
+    }
+    
+    p {
+        font-size: 1em;
+        margin-bottom: 60px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+
+    }
+
+    .button-redirect {
+        gap: 80px;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 610px) {
+    .overlay-text {
+        width: 500px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+    
+    p {
+        font-size: 0.8em;
+        margin-bottom: 60px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+
+    }
+
+    .button-redirect {
+        gap: 0px;
+    }
+}
+
+@media screen and (min-width: 470px) and (max-width: 520px) {
+    .overlay-text {
+        width: 450px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+    
+    p {
+        font-size: 0.8em;
+        margin-bottom: 50px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .button-redirect {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 370px) and (max-width: 470px) {
+    .overlay-text {
+        width: 350px;
+    }
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+    
+    p {
+        font-size: 0.8em;
+        margin-bottom: 50px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .button-redirect {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 270px) and (max-width: 370px) {
+    .overlay-text {
+        width: 280px;
+    }
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    
+    p {
+        font-size: 0.8em;
+        margin-bottom: 50px;
+    }
+
+    .redirect-button {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+
+    .button-redirect {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
